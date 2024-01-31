@@ -1,8 +1,12 @@
+@import "./presets";
+
 *,
 *::before,
 *::after {
   box-sizing: border-box;
   font-family: "Poppins", sans-serif;
+  list-style-type: none;
+  text-decoration: none;
   margin: 0;
   padding: 0;
 }
@@ -14,5 +18,156 @@ html {
 
 body {
   text-decoration: none;
-  background-color: #292929;
+  background-color: #fff;
+}
+
+// ||----- LANDING PAGE STYLES ----- ||
+
+// || HEADER||
+.header {
+  @include displayFlex;
+  height: 100vh;
+  width: 100%;
+
+  &__hero-section {
+    box-shadow: 0 0 10px #050505;
+    border-radius: $border-radius-lg;
+    height: 95vh;
+    width: 85%;
+
+    display: grid;
+    grid-template-areas: "hero-section__left hero-section__right";
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-rows: repeat(1, minmax(0, 1fr));
+  }
+}
+
+.hero-section__right {
+  background-image: url("/project-assests/images/adobe-products-on-tablet.jpg");
+  @include resetBackground;
+  grid-area: hero-section__right;
+  border-top-right-radius: $border-radius-lg;
+  border-bottom-right-radius: $border-radius-lg;
+
+  &-navigation {
+    @include displayFlex;
+    justify-content: flex-end;
+
+    // background-color: #fff;
+    padding: 0 5em;
+    height: 10em;
+    width: 100%;
+
+    position: relative;
+    overflow-x: hidden;
+  }
+}
+
+.right-navigation__logo {
+  height: 5em;
+  width: 5em;
+  display: none;
+
+  img {
+    border-radius: 100%;
+    height: 100%;
+    width: 100%;
+  }
+}
+
+.right-navigation__links {
+  @include displayFlex;
+  padding: 0;
+  position: relative;
+  transition: $transition;
+  transform: translateX(1000px);
+
+  li {
+    margin: 0 2em;
+    transition: $transition;
+
+    a {
+      padding: 0;
+      font-size: 1.4em;
+      font-weight: 500;
+      color: $text-color-primary;
+      transition: $transition;
+
+      &:hover {
+        color: #b61b90;
+      }
+    }
+  }
+}
+
+.right-navigation__icon {
+  background-image: url("/project-assests/icons/menu.png");
+  @include resetBackground;
+
+  cursor: pointer;
+  width: 35px;
+  height: 35px;
+  filter: invert(1);
+  transition: $transition;
+}
+
+.right-navigation__icon.nav--close {
+  background-image: url("/project-assests/icons/close.png");
+  @include resetBackground;
+  cursor: pointer;
+  width: 20px;
+  height: 20px;
+  filter: invert(1);
+  transition: $transition;
+}
+
+.hero-section__right-navigation.view-overflow {
+  overflow-x: visible;
+}
+
+.dropdown {
+  position: absolute;
+  display: none;
+
+  li {
+    margin: 1.5em 0;
+  }
+}
+
+.dropdown.active {
+  display: block;
+}
+
+.hero-section__left {
+  background-image: url("/project-assests/images/Display.jpg");
+  @include resetBackground;
+  border-top-left-radius: $border-radius-lg;
+  border-bottom-left-radius: $border-radius-lg;
+  grid-area: hero-section__left;
+
+  position: relative;
+  padding: 0 5em;
+}
+
+.left__social-media-icons {
+  position: absolute;
+  bottom: 0;
+  height: 10em;
+  width: 100%;
+  @include displayFlex;
+  justify-content: flex-start;
+
+  img {
+    filter: invert(1);
+    height: 30px;
+    margin: 0 2em;
+    transition: $transition;
+    width: 30px;
+
+    &:hover {
+      transform: translateY(-5px);
+      filter: invert(50);
+      opacity: 0.5;
+    }
+  }
 }

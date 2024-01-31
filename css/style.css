@@ -3,6 +3,8 @@
 *::after {
   box-sizing: border-box;
   font-family: "Poppins", sans-serif;
+  list-style-type: none;
+  text-decoration: none;
   margin: 0;
   padding: 0;
 }
@@ -14,5 +16,154 @@ html {
 
 body {
   text-decoration: none;
-  background-color: #292929;
+  background-color: #fff;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  width: 100%;
+}
+.header__hero-section {
+  box-shadow: 0 0 10px #050505;
+  border-radius: 1.5em;
+  height: 95vh;
+  width: 85%;
+  display: grid;
+  grid-template-areas: "hero-section__left hero-section__right";
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-template-rows: repeat(1, minmax(0, 1fr));
+}
+
+.hero-section__right {
+  background-image: url("/project-assests/images/adobe-products-on-tablet.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  grid-area: hero-section__right;
+  border-top-right-radius: 1.5em;
+  border-bottom-right-radius: 1.5em;
+}
+.hero-section__right-navigation {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  justify-content: flex-end;
+  padding: 0 5em;
+  height: 10em;
+  width: 100%;
+  position: relative;
+  overflow-x: hidden;
+}
+
+.right-navigation__logo {
+  height: 5em;
+  width: 5em;
+  display: none;
+}
+.right-navigation__logo img {
+  border-radius: 100%;
+  height: 100%;
+  width: 100%;
+}
+
+.right-navigation__links {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  position: relative;
+  transition: all 250ms ease-in-out 5ms;
+  transform: translateX(1000px);
+}
+.right-navigation__links li {
+  margin: 0 2em;
+  transition: all 250ms ease-in-out 5ms;
+}
+.right-navigation__links li a {
+  padding: 0;
+  font-size: 1.4em;
+  font-weight: 500;
+  color: #fff;
+  transition: all 250ms ease-in-out 5ms;
+}
+.right-navigation__links li a:hover {
+  color: #b61b90;
+}
+
+.right-navigation__icon {
+  background-image: url("/project-assests/icons/menu.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  cursor: pointer;
+  width: 35px;
+  height: 35px;
+  filter: invert(1);
+  transition: all 250ms ease-in-out 5ms;
+}
+
+.right-navigation__icon.nav--close {
+  background-image: url("/project-assests/icons/close.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  cursor: pointer;
+  width: 20px;
+  height: 20px;
+  filter: invert(1);
+  transition: all 250ms ease-in-out 5ms;
+}
+
+.hero-section__right-navigation.view-overflow {
+  overflow-x: visible;
+}
+
+.dropdown {
+  position: absolute;
+  display: none;
+}
+.dropdown li {
+  margin: 1.5em 0;
+}
+
+.dropdown.active {
+  display: block;
+}
+
+.hero-section__left {
+  background-image: url("/project-assests/images/Display.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-top-left-radius: 1.5em;
+  border-bottom-left-radius: 1.5em;
+  grid-area: hero-section__left;
+  position: relative;
+  padding: 0 5em;
+}
+
+.left__social-media-icons {
+  position: absolute;
+  bottom: 0;
+  height: 10em;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  justify-content: flex-start;
+}
+.left__social-media-icons img {
+  filter: invert(1);
+  height: 30px;
+  margin: 0 2em;
+  transition: all 250ms ease-in-out 5ms;
+  width: 30px;
+}
+.left__social-media-icons img:hover {
+  transform: translateY(-5px);
+  filter: invert(50);
+  opacity: 0.5;
 }/*# sourceMappingURL=style.css.map */
