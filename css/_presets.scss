@@ -1,0 +1,21 @@
+// TEXT COLORS
+$text-color-primary: #fff;
+// MIXINS
+@mixin displayFlex {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin resetBackground {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+// BORDERS
+$border-radius-lg: 1.5em;
+$border-radius-sm: 1em;
+// BACKGROUNDS
+// FUNCTIONS
+// TRANSITION
+$transition: all 250ms ease-in-out 5ms;
