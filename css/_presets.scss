@@ -19,3 +19,17 @@ $border-radius-sm: 1em;
 // FUNCTIONS
 // TRANSITION
 $transition: all 250ms ease-in-out 5ms;
+
+// TITLES
+@mixin title-lg {
+  grid-area: title;
+
+  color: $text-color-primary;
+  font-size: 5em;
+  font-weight: 700;
+  text-align: center;
+}
+
+@mixin title-sm {
+  font-size: 3em;
+}

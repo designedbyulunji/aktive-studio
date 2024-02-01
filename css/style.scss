@@ -1,4 +1,5 @@
 @import "./presets";
+@import url("https://fonts.googleapis.com/css2?family=Black+Ops+One&display=swap");
 
 *,
 *::before,
@@ -44,10 +45,25 @@ body {
 
 .hero-section__right {
   background-image: url("/project-assests/images/adobe-products-on-tablet.jpg");
+
   @include resetBackground;
   grid-area: hero-section__right;
   border-top-right-radius: $border-radius-lg;
   border-bottom-right-radius: $border-radius-lg;
+  position: relative;
+
+  // animation: name duration timing-function delay iteration-count direction fill-mode;
+  animation: switchBanner;
+  animation-duration: 25s;
+  animation-timing-function: ease-in-out;
+  // animation-delay: 250ms;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+
+  &:hover {
+    cursor: pointer;
+    animation-play-state: paused;
+  }
 
   &-navigation {
     @include displayFlex;
@@ -60,6 +76,31 @@ body {
 
     position: relative;
     overflow-x: hidden;
+  }
+}
+
+// || BANNER ANIMATION
+
+@keyframes switchBanner {
+  0% {
+    background-image: url("/project-assests/images/adobe-products-on-tablet.jpg");
+    @include resetBackground;
+  }
+  25% {
+    background-image: url("/project-assests/images/cameras.jpg");
+    @include resetBackground;
+  }
+  50% {
+    background-image: url("/project-assests/images/programming.jpg");
+    @include resetBackground;
+  }
+  75% {
+    background-image: url("/project-assests/images/shiny-lens.jpg");
+    @include resetBackground;
+  }
+  100% {
+    background-image: url("/project-assests/images/social-media-woman-laptop.jpg");
+    @include resetBackground;
   }
 }
 
@@ -170,4 +211,456 @@ body {
       opacity: 0.5;
     }
   }
+}
+
+.hero-section__right-bottom {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 10em;
+  @include displayFlex;
+  justify-content: space-between;
+  padding: 0 5em;
+}
+
+.btn {
+  font-size: 2em;
+  padding: 15px 30px;
+  color: $text-color-primary;
+  background: transparent;
+  outline: 0;
+  overflow: hidden;
+  border: 2px solid #1b2540;
+  cursor: pointer;
+  position: relative;
+  border-radius: 5px;
+  transition: $transition;
+}
+.btn.btn:hover {
+  box-shadow: 1px 1px 5px #1b2540;
+  transform: scale(1.1);
+}
+.btn::before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  transform: translateX(-100%);
+  background: linear-gradient(90deg, transparent, #1b2540, transparent);
+  transition: all 500ms ease;
+}
+.btn:hover::before {
+  left: 100%;
+  transform: translateX(100%);
+}
+
+.right-bottom__glow {
+  @include displayFlex;
+  background: rgb(23, 252, 23);
+  border-radius: 100%;
+  border: none;
+  box-shadow: 0 0 10px 2px rgb(23, 252, 23);
+  cursor: pointer;
+  height: 30px;
+  width: 30px;
+
+  // animation: name duration timing-function delay iteration-count direction fill-mode;
+  animation: bubble_glow 4s alternate 0ms infinite;
+  transition: $transition;
+}
+
+.glow__inner-circle {
+  width: 12px;
+  height: 12px;
+  background: #ffffff;
+  border: none;
+  border-radius: 100%;
+  filter: opacity(0.8);
+}
+
+// GLOW CLOSED
+.right-bottom__glow.close {
+  animation: none;
+  box-shadow: none;
+  background: #262240;
+}
+
+.glow__inner-circle.close {
+  background: #b61b90;
+}
+
+// GLOW ANIMAION
+@keyframes bubble_glow {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    box-shadow: 0 0 10px 3px rgb(23, 252, 23);
+    filter: hue-rotate(220deg);
+    // filter: hue-rotate(180deg);
+    transform: scale(1.19);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+// || ----- LANDING PAGE MEDIA QUERIES ----- ||
+
+// || ----- HEADER MEDIA QUERIES AT 425PX ----- ||
+@media (max-width: 430px) {
+  .header {
+    display: block;
+    height: 50vh;
+  }
+
+  .header__hero-section {
+    width: 100%;
+    height: 50vh;
+    border: none;
+    box-shadow: none;
+    border-radius: none;
+    grid-template-areas: "hero-section__right";
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+    grid-template-rows: repeat(1, minmax(0, 1fr));
+
+    .hero-section__left {
+      display: none;
+    }
+
+    .hero-section__right {
+      border-radius: 0;
+    }
+  }
+
+  .hero-section__right-navigation {
+    justify-content: space-between;
+    padding: 0 2.5em;
+    height: 10em;
+    width: 100%;
+  }
+
+  .right-navigation__logo {
+    display: block;
+  }
+
+  .right-navigation__links {
+    @include displayFlex;
+    transition: $transition;
+
+    li {
+      margin: 0;
+      transition: $transition;
+    }
+  }
+
+  .hero-section__right-bottom {
+    bottom: 0;
+    width: 100%;
+    height: 20em;
+    @include displayFlex;
+    flex-direction: column;
+    padding: 0;
+  }
+
+  .right-bottom__glow {
+    margin-top: 15px;
+  }
+
+  .btn {
+    font-size: 2em;
+    padding: 8px 20px;
+  }
+}
+
+// || -----LANDING PAGE MAIN SECTION ----- ||
+
+.main {
+  background-color: #262240;
+  // background-image: linear-gradient(to right, #262240 50%, #1b2540 50%);
+  border-radius: $border-radius-lg;
+  padding: 2em 5em;
+  width: 85%;
+  margin-inline: auto;
+}
+
+.card {
+  background: linear-gradient(
+    to left top,
+    #1b2540,
+    #4f1440 40%,
+    #4f1440 50%,
+    #262240
+  );
+  border-radius: $border_radius_sm;
+  position: relative;
+  height: 35em;
+  overflow: hidden;
+  transition: $transition;
+
+  &:hover {
+    cursor: pointer;
+    transform: scale(1.025);
+  }
+}
+
+// MAIN OVERVIEW
+
+.main__overview {
+  display: grid;
+  grid-template-areas:
+    "title title"
+    "photography videography"
+    "web-design graphic-design"
+    "social-media-management .";
+  grid-template-rows: repeat(4, minmax(0, auto));
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+
+  gap: 2em;
+}
+
+.main__overview-title {
+  grid-area: title;
+
+  color: $text-color-primary;
+  font-size: 5em;
+  font-weight: 700;
+  text-align: center;
+}
+
+.main__overview-photography {
+  grid-area: photography;
+  background-image: url("/project-assests/images/photography-animated.jpg");
+  @include resetBackground;
+}
+
+.main__overview-videography {
+  grid-area: videography;
+  background-image: url("/project-assests/images/videography-animated.jpg");
+  @include resetBackground;
+}
+
+.main__overview-graphic-design {
+  grid-area: graphic-design;
+  background-image: url("/project-assests/images/graphics-animated-2.jpg");
+  @include resetBackground;
+}
+
+.main__overview-web-development {
+  grid-area: web-design;
+  background-image: url("/project-assests/images/web-dev-animated.jpg");
+  @include resetBackground;
+}
+
+.main__overview-social-media-management {
+  grid-area: social-media-management;
+  background-image: url("/project-assests/images/social-media-mgt-animated.jpg");
+  @include resetBackground;
+  // background-position: top;
+}
+
+// CARD DESCRIPTION
+.card__description {
+  position: absolute;
+  bottom: 0;
+
+  background: rgba(22, 15, 59, 0.6);
+  border-bottom-right-radius: 1em;
+  border-bottom-right-radius: 1em;
+  width: 100%;
+
+  padding: 0.5em 2em;
+  transition: $transition;
+  transform: translateY(100px);
+
+  &:hover {
+    transform: translateY(0);
+  }
+}
+
+.min-description-title {
+  color: $text-color-primary;
+  margin-bottom: 10px;
+  font-size: 2em;
+}
+
+.min-description {
+  color: $text-color-primary;
+  font-size: 1.6em;
+  opacity: 0;
+
+  &:hover {
+    opacity: 1;
+  }
+}
+
+//  || ----- MAIN-OVERVIEW MEDIA QUERIES
+@media (max-width: 430px) {
+  .card {
+    height: 22em;
+    border-radius: 0.5em;
+  }
+
+  .main {
+    background-color: #262240;
+    // background-image: linear-gradient(to right, #262240 50%, #1b2540 50%);
+    border-radius: 0;
+    padding: 2em 2em;
+    width: 100%;
+  }
+
+  .main__overview {
+    grid-template-areas:
+      "title"
+      "photography"
+      "videography"
+      "web-design"
+      "graphic-design"
+      "social-media-management";
+    grid-template-rows: repeat(6, minmax(0, auto));
+    grid-template-columns: auto;
+
+    gap: 2em;
+  }
+
+  .main__overview-title {
+    font-size: 3em;
+  }
+
+  .card__description {
+    border-bottom-right-radius: 0.5em;
+    border-bottom-right-radius: 0.5em;
+
+    transform: translateY(100px);
+  }
+
+  .min-description-title {
+    font-size: 2em;
+  }
+
+  .min-description {
+    font-size: 1.2em;
+  }
+  .right-navigation__links {
+    display: none;
+  }
+}
+
+// || -----NEWS -----||
+
+.main__news {
+  display: grid;
+
+  grid-template-areas:
+    "news"
+    "news__description";
+  grid-template-columns: auto;
+  grid-template-rows: repeat(2, minmax(0, auto));
+
+  gap: 2em;
+  margin-top: 2em;
+}
+
+.main__news-title {
+  @include title-lg;
+  grid-area: news;
+}
+
+.main__news-container {
+  grid-area: news__description;
+  height: 50em;
+
+  border-radius: $border-radius-lg;
+  box-shadow: 0 0 10px #050505;
+  background-image: linear-gradient(to bottom, #000 70%, rgb(22, 15, 59) 70%);
+}
+
+.news__banner {
+  width: 100%;
+  height: 70%;
+  border-top-right-radius: $border-radius-lg;
+  border-top-left-radius: $border-radius-lg;
+  background-image: url("/project-assests/images/gaming-set-up.jpg");
+  @include resetBackground;
+  background-position: top;
+  @include displayFlex;
+}
+
+.banner__inner-content {
+  @include title-lg;
+  font-size: 8em;
+  text-transform: uppercase;
+  font-family: "Black Ops One", system-ui;
+  mix-blend-mode: difference;
+}
+
+.news__description {
+  width: 100%;
+  height: calc(100% - 70%);
+  padding: 0.5em 2em;
+  font-size: 2em;
+  color: #fff;
+}
+
+// || MAIN-NEWS MEDIA QUERIES
+
+@media (max-width: 430px) {
+  .main__news-container {
+    height: 30em;
+    border-radius: 0.5em;
+    box-shadow: 0 0 10px rgba(5, 5, 5, 0.5);
+  }
+
+  .news__banner {
+    border-top-right-radius: 0.5em;
+    border-top-left-radius: 0.5em;
+  }
+  .main__news-title {
+    @include title-sm;
+  }
+
+  .banner__inner-content {
+    font-size: 4.5em;
+  }
+
+  .news__description {
+    font-size: 1.2em;
+  }
+}
+
+// || ----- MAIN CLIENT LOGO ----- ||
+
+.client-logo {
+  height: 300px;
+  width: 300px;
+}
+
+.swiper {
+  margin-top: 2em;
+  height: 50em;
+  border-radius: $border-radius-lg;
+  width: 100%;
+}
+
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #ccc;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 50%;
+  height: 50%;
+  object-fit: cover;
+}
+
+.swiper {
+  margin-left: auto;
+  margin-right: auto;
 }
