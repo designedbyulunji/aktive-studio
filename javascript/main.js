@@ -24,21 +24,21 @@ function switchIcon() {
 
 /* GLOW ELEMENT */
 
-// const glowEl = document.querySelector(".glow");
-// const innerCircleEl = document.querySelector(".glow__inner-circle");
+const glowEl = document.querySelector(".right-bottom__glow");
+const innerCircleEl = document.querySelector(".glow__inner-circle");
 
-// const currentDate = new Date();
-// const currentHour = currentDate.getHours();
+const currentDate = new Date();
+const currentHour = currentDate.getHours();
 
-// if (currentHour >= 8 && currentHour <= 16) {
-//   glowEl.classList.remove("close");
-//   innerCircleEl.classList.remove("close");
-// }
-// else {
-//   glowEl.classList.add("close");
-//   innerCircleEl.classList.add("close");
-//   glowEl.setAttribute("title", "We are closed")
-// }
+if (currentHour >= 8 && currentHour <= 16) {
+  glowEl.classList.remove("close");
+  innerCircleEl.classList.remove("close");
+}
+else {
+  glowEl.classList.add("close");
+  innerCircleEl.classList.add("close");
+  glowEl.setAttribute("title", "We are closed")
+}
 
 /* DROPDOWN */
 
@@ -61,3 +61,19 @@ function removeClass() {
 
 dropDownParentEl.addEventListener("mouseover", addClass);
 dropDownParentEl.addEventListener("mouseout", removeClass);
+
+/* SWIPPER */
+
+const swiper = new Swiper(".mySwiper", {
+  slidesPerView: 1,
+  spaceBetween: 30,
+  loop: true,
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true,
+  },
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
+});
