@@ -619,4 +619,372 @@ body {
 .swiper {
   margin-left: auto;
   margin-right: auto;
+}
+
+@media (max-width: 430px) {
+  .swiper {
+    height: 22em;
+  }
+}
+.footer {
+  display: grid;
+  grid-template-areas: "footer__address hero-section__social-media-icons--footer footer__copyright";
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-rows: repeat(1, minmax(0, auto));
+  padding: 2em 5em;
+  width: 85%;
+  background: #262240;
+  margin-inline: auto;
+  margin-top: 2em;
+}
+
+.footer__address {
+  grid-area: footer__address;
+  justify-self: center;
+}
+
+.hero-section__social-media-icons--footer {
+  grid-area: hero-section__social-media-icons--footer;
+}
+.hero-section__social-media-icons--footer img {
+  filter: invert(1);
+  height: 30px;
+  margin: 0 2em;
+  transition: all 250ms ease-in-out 5ms;
+  width: 30px;
+}
+.hero-section__social-media-icons--footer img:hover {
+  transform: translateY(-5px);
+  filter: invert(50);
+  opacity: 0.5;
+}
+
+.footer__copyright {
+  grid-area: footer__copyright;
+  justify-self: center;
+  align-self: center;
+  color: #fff;
+  font-size: 1.5em;
+}
+
+.address__title {
+  grid-area: title;
+  color: #fff;
+  font-size: 5em;
+  font-weight: 700;
+  text-align: center;
+  -moz-text-align-last: left;
+       text-align-last: left;
+  font-size: 4em;
+  margin-bottom: 0.5em;
+}
+
+.address__description {
+  color: #fff;
+  text-align: justify;
+  font-size: 1.5em;
+}
+
+.hero-section__social-media-icons--footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  align-self: center;
+}
+
+@media (max-width: 430px) {
+  .footer {
+    grid-template-areas: "footer__address" "hero-section__social-media-icons--footer" "footer__copyright";
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+    grid-template-rows: repeat(3, minmax(100px, auto));
+    padding: 0.5em 2em;
+    width: 100%;
+    margin-top: 2em;
+  }
+  .hero-section__social-media-icons--footer {
+    justify-self: start;
+  }
+  .footer__copyright {
+    grid-area: footer__copyright;
+    justify-self: start;
+    color: #fff;
+    font-size: 1.5em;
+  }
+  .address__title {
+    font-size: 2em;
+  }
+}
+.social-media-right {
+  display: none;
+}
+
+.header__other-pages {
+  display: grid;
+  grid-template-areas: "hero-section__right";
+  grid-template-columns: repeat(1, minmax(0, 1fr));
+  grid-template-rows: repeat(1, minmax(0, 1fr));
+}
+
+.hero-section__left--other-pages {
+  display: none;
+}
+
+.hero-section__right--other-pages {
+  border-radius: 1.5em;
+}
+
+.social-media-right--other-pages {
+  display: block;
+  position: relative;
+  height: auto;
+  width: auto;
+}
+
+.right-navigation__logo--other-pages {
+  display: block;
+}
+
+.hero-section__right-navigation--other-pages {
+  justify-content: space-between;
+}
+
+.hero-section__right-bottom--other-pages {
+  justify-content: space-evenly;
+}
+
+@media (max-width: 430px) {
+  .social-media-right--other-pages {
+    display: none;
+  }
+}
+.btn__about-page {
+  display: none;
+}
+
+.hero__about-page {
+  background-image: url("/project-assests/images/Display.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  animation: none;
+}
+.hero__about-page:hover {
+  cursor: default;
+}
+
+.about-statements__title {
+  grid-area: title;
+  color: #fff;
+  font-size: 5em;
+  font-weight: 700;
+  text-align: center;
+}
+
+.description-conatiner__title {
+  color: #fff;
+  font-size: 3em;
+  margin-bottom: 0.5em;
+}
+
+.description-container__description {
+  color: #dddddd;
+  font-size: 2em;
+}
+
+.about-statement__description-container {
+  margin: 1em 0;
+  padding: 0.5em 0;
+}
+
+@media (max-width: 430px) {
+  .about-statements__title {
+    font-size: 3em;
+  }
+  .description-conatiner__title {
+    color: #fff;
+    font-size: 2em;
+    margin-bottom: 0.25em;
+  }
+  .description-container__description {
+    color: #dddddd;
+    font-size: 1.7em;
+  }
+}
+.main__about-team {
+  display: grid;
+  grid-template-areas: "title title" "felix brave" "tiwo ayami" "ulunji .";
+  grid-template-rows: repeat(4, minmax(0, auto));
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 2em;
+}
+
+.about-team__title {
+  grid-area: title;
+  grid-area: title;
+  color: #fff;
+  font-size: 5em;
+  font-weight: 700;
+  text-align: center;
+}
+
+.about-team__felix {
+  grid-area: felix;
+}
+
+.about-team__brave {
+  grid-area: brave;
+}
+
+.about-team__tiwo {
+  grid-area: tiwo;
+}
+
+.about-team__ayami {
+  grid-area: ayami;
+}
+
+.about-team__ulunji {
+  grid-area: ulunji;
+}
+
+.card--profile {
+  height: 55em;
+  background: none;
+}
+
+.about-team__profile-picture {
+  width: 100%;
+  height: 65%;
+}
+
+.about-team__description {
+  width: 100%;
+  height: 35%;
+  padding: 1em;
+  background-color: #160f3b;
+}
+
+.profile-name {
+  color: #fff;
+  font-size: 2.8em;
+  text-align: center;
+}
+
+.profile-title {
+  color: rgb(25, 59, 161);
+  font-size: 2em;
+  text-align: center;
+}
+
+.profile-description {
+  color: #ddd;
+  font-size: 1.7em;
+  bottom: 0;
+  transform: translateY(0px);
+  transition: all 250ms ease-in-out 5ms;
+}
+.profile-description:hover {
+  background-color: rgb(22, 15, 59);
+  transform: translateY(-100px);
+  height: 100%;
+}
+
+.up-arrow {
+  width: 20px;
+  height: 16px;
+  margin: 10px 0;
+  display: block;
+  margin-inline: auto;
+  position: relative;
+  transition: all 250ms ease-in-out 5ms;
+  animation: animateDescription;
+  animation-duration: 1s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+@keyframes animateDescription {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(5px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+.about-team__profile-picture--felix {
+  background-image: url("/project-assests/images/team-felix.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.about-team__profile-picture--bravery {
+  background-image: url("/project-assests/images/team-bravery.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.about-team__profile-picture--tiwo {
+  background-image: url("/project-assests/images/team-teewo.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.about-team__profile-picture--ayami {
+  background-image: url("/project-assests/images/team-petro.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.about-team__profile-picture--ulunji {
+  background-image: url("/project-assests/images/team-ulunji.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+@media (max-width: 430px) {
+  .main__about-team {
+    grid-template-areas: "title" "felix" "brave" "tiwo" "ayami" "ulunji";
+    grid-template-rows: repeat(6, minmax(0, auto));
+    grid-template-columns: auto;
+    gap: 2em;
+  }
+  .about-team__profile-picture {
+    width: 100%;
+    height: 60%;
+  }
+  .card--profile {
+    height: 40em;
+  }
+  .about-team__description {
+    height: 40%;
+    padding: 0.5em;
+  }
+  .profile-name {
+    font-size: 2.2em;
+  }
+  .profile-title {
+    font-size: 1.8em;
+  }
+  .profile-description {
+    font-size: 1.6em;
+  }
 }/*# sourceMappingURL=style.css.map */
