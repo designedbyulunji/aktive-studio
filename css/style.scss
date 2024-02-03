@@ -119,12 +119,13 @@ body {
 .right-navigation__links {
   @include displayFlex;
   padding: 0;
+  // margin: 0 1em;
   position: relative;
   transition: $transition;
   transform: translateX(1000px);
 
   li {
-    margin: 0 2em;
+    margin: 0 1.5em;
     transition: $transition;
 
     a {
@@ -574,7 +575,7 @@ body {
 
   border-radius: $border-radius-lg;
   box-shadow: 0 0 10px #050505;
-  background-image: linear-gradient(to bottom, #000 70%, rgb(22, 15, 59) 70%);
+  background-image: linear-gradient(to bottom, #000 70%, #160f3b 70%);
 }
 
 .news__banner {
@@ -723,7 +724,7 @@ body {
 .address__title {
   @include title-lg;
   text-align-last: left;
-  font-size: 4em;
+  font-size: 3.5em;
   margin-bottom: 0.5em;
 }
 
@@ -938,7 +939,7 @@ body {
 }
 
 .profile-title {
-  color: rgb(25, 59, 161);
+  color: rgb(55, 93, 206);
   font-size: 2em;
   text-align: center;
 }
@@ -953,7 +954,7 @@ body {
 
   &:hover {
     background-color: rgba(22, 15, 59, 1);
-    transform: translateY(-100px);
+    transform: translateY(-110px);
     height: 100%;
   }
 }
@@ -1068,5 +1069,218 @@ body {
 
   .profile-description {
     font-size: 1.6em;
+  }
+}
+
+// || ----- CONTACT PAGE STYLES ----- ||
+
+.hero-section__right--contact-page {
+  background-image: url("/project-assests/images/contact-page-image.jpg");
+  animation: none;
+}
+
+.hero-section__left--contact-page {
+  background-image: none;
+  background-color: #fff;
+  @include displayFlex;
+}
+
+.aktive-img {
+  width: 400px;
+}
+
+.left__social-media-icons--contact-page img {
+  filter: none;
+
+  &:hover {
+    filter: none;
+  }
+}
+
+.right-navigation__links--contact-page li a {
+  color: #050505;
+}
+
+.right-bottom__button--contact-page {
+  color: #1b2540;
+}
+
+// ADDRESS
+.main__contact-address {
+  display: grid;
+  grid-template-areas:
+    "title title"
+    "physical-address postal-address";
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-template-rows: repeat(2, minmax(0, auto));
+
+  gap: 2em;
+}
+
+.contact-address__title {
+  grid-area: title;
+  @include title-lg;
+}
+
+.contact-address__physical-address {
+  grid-area: physical-address;
+}
+
+.contact-address__postal-address {
+  grid-area: postal-address;
+}
+
+.physical-address__title,
+.postal-address__title {
+  color: $text-color-primary;
+  font-size: 2.5em;
+  margin-bottom: 10px;
+}
+
+.physical-address__description,
+.postal-address__description {
+  color: #ddd;
+  font-size: 1.6em;
+}
+
+// EMAIL WRAPPER
+.main__email-wrapper {
+  display: grid;
+  grid-template-areas: "img email";
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-template-rows: auto;
+
+  height: 50em;
+  margin: 2em 0;
+
+  background-color: #160f3b;
+  border-radius: $border-radius-lg;
+}
+
+.email-wrapper__left-side {
+  grid-area: img;
+  background-image: url("/project-assests/images/contact-page-image-secondary.jpg");
+  @include resetBackground;
+
+  border-top-left-radius: $border-radius-lg;
+  border-bottom-left-radius: $border-radius-lg;
+}
+
+.email-wrapper__right-side {
+  grid-area: email;
+  @include displayFlex;
+}
+
+form {
+  width: 90%;
+  height: auto;
+
+  color: $text-color-primary;
+  // background-color: #08041f;
+}
+
+legend {
+  font-size: 2em;
+  font-weight: 600;
+}
+
+label,
+input,
+textarea {
+  width: 100%;
+  outline: 0;
+  border: none;
+  margin: 0.5em 0;
+  border-radius: 0.25em;
+}
+
+label,
+input {
+  font-size: 1.6em;
+}
+
+input {
+  padding: 0.5em;
+}
+
+textarea {
+  resize: none;
+  padding: 0.5em;
+}
+
+fieldset {
+  border: none;
+  padding: 0.5em;
+}
+
+.form-btn {
+  padding: 10px 30px;
+  border: 1px solid #fff;
+}
+
+// || CONTACT PAGE MEDIA QUERIES
+
+@media (max-width: 430px) {
+  .main__contact-address {
+    grid-template-areas:
+      "title"
+      "physical-address"
+      "postal-address";
+    grid-template-columns: auto;
+    grid-template-rows: auto;
+
+    gap: 1em;
+  }
+
+  .contact-address__title {
+    @include title-sm;
+  }
+  .physical-address__title,
+  .postal-address__title {
+    color: $text-color-primary;
+    font-size: 2.2em;
+    margin-bottom: 10px;
+  }
+
+  .physical-address__description,
+  .postal-address__description {
+    font-size: 1.6em;
+  }
+
+  .right-bottom__button--contact-page {
+    display: none;
+  }
+
+  // EMAIL WRAPPER
+  .main__email-wrapper {
+    grid-template-areas:
+      "img"
+      "email";
+    grid-template-columns: auto;
+    grid-template-rows: repeat(2, minmax(15em, auto));
+    height: 65em;
+    margin: 1em 0;
+    border-radius: 1em;
+  }
+
+  .email-wrapper__left-side {
+    @include resetBackground;
+
+    border-top-right-radius: $border-radius-sm;
+    border-top-left-radius: $border-radius-sm;
+    border-bottom-left-radius: 0;
+    // padding-bottom: 10px;
+  }
+
+  .email-wrapper__right-side {
+    display: block;
+  }
+
+  form {
+    width: 90%;
+    height: auto;
+    margin-inline: auto;
+
+    color: $text-color-primary;
   }
 }

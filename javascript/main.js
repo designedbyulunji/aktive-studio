@@ -77,3 +77,43 @@ const swiper = new Swiper(".mySwiper", {
     prevEl: ".swiper-button-prev",
   },
 });
+
+/* ANIMATE PLACEHOLDER */
+
+// FULL NAME PLACEHOLDER ANIMATION
+let x = 0;
+let typeSpeed = 150;
+let fullNamePlaceholder = "";
+let fullNamePlaceholderValue = `Krassic Felix`;
+
+const fullNameEl = document.getElementById("fullname");
+
+function animateFullNamePlaceholder() {
+  fullNamePlaceholder += fullNamePlaceholderValue.charAt(x);
+  fullNameEl.setAttribute("placeholder", fullNamePlaceholder);
+  x++;
+
+  setTimeout(animateFullNamePlaceholder, typeSpeed);
+}
+
+/* EXECUTE FULL NAME ANIMATION FUNCTION */
+animateFullNamePlaceholder();
+
+// EMAIL PLACEHOLDER ANIMATION
+
+let y = 0;
+let emailPlaceholder = "";
+let emailPlaceholderValue = `example@gmail.com`
+
+const emailEl = document.getElementById("email");
+
+function animateEmailPlaceholder() {
+  emailPlaceholder += emailPlaceholderValue.charAt(y);
+  emailEl.setAttribute("placeholder", emailPlaceholder);
+  y++;
+
+  setTimeout(animateEmailPlaceholder, 100);
+}
+
+/* EXECUTE EMAIL ANIMATION FUNCTION */
+animateEmailPlaceholder();
