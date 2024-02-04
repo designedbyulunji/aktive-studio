@@ -671,6 +671,7 @@ body {
 @media (max-width: 430px) {
   .swiper {
     height: 22em;
+    border-radius: 0.5em;
   }
 }
 
@@ -1045,6 +1046,10 @@ body {
     gap: 2em;
   }
 
+  .about-team__title {
+    font-size: 3em;
+  }
+
   .about-team__profile-picture {
     width: 100%;
     height: 60%;
@@ -1283,4 +1288,529 @@ fieldset {
 
     color: $text-color-primary;
   }
+}
+
+// || ----- PHOTOGRAPHY PAGE STYLES ----- ||
+
+.hero-section__right--photography {
+  animation: none;
+  background-image: url("/project-assests/images/cameras.jpg");
+  @include resetBackground;
+}
+
+.hero-section__left--photography {
+  background-image: none;
+  background-image: linear-gradient(
+    to left top,
+    #0e1425,
+    #4f1440 40%,
+    #4f1440 50%,
+    #0e1425
+  );
+  @include displayFlex;
+  justify-content: flex-start;
+}
+
+.photography-hero__title {
+  font-size: 6em;
+  color: $text-color-primary;
+}
+
+.photography-hero__description {
+  margin-top: 10px;
+  font-size: 1.6em;
+  color: #ddd;
+}
+
+// || PRICING
+.pricing {
+  display: grid;
+  grid-template-areas:
+    "title title title"
+    "card-one card-two card-three";
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-rows: repeat(2, minmax(0, auto));
+
+  gap: 2em;
+
+  width: 80%;
+  margin-inline: auto;
+}
+
+.pricing__title {
+  grid-area: title;
+  @include title-lg;
+}
+
+.card-one {
+  grid-area: card-one;
+}
+
+.card-two {
+  grid-area: card-two;
+}
+
+.card-three {
+  grid-area: card-three;
+}
+
+.pricing__price-card {
+  justify-self: center;
+  align-self: center;
+
+  background-image: linear-gradient(
+    to bottom,
+    #fff 80%,
+    rgba(255, 255, 255, 0) 80%
+  );
+  border-radius: $border-radius-sm;
+  height: 30em;
+  width: 25em;
+
+  // @include displayFlex;
+  // flex-direction: column;
+}
+
+.package-name {
+  font-size: 2em;
+  color: #160f3b;
+  text-align: center;
+  height: 15%;
+
+  @include displayFlex;
+}
+
+.package-price {
+  font-size: 2.5em;
+  color: #160f3b;
+  text-align: center;
+  height: 15%;
+  font-weight: 500;
+
+  @include displayFlex;
+}
+
+.package-feature {
+  text-align: center;
+  height: 50%;
+
+  ul {
+    li {
+      color: #160f3b;
+      font-size: 1.5em;
+      font-weight: 400;
+    }
+  }
+}
+
+.features-title {
+  font-size: 2em;
+  color: #160f3b;
+}
+
+.order-btn {
+  height: 20%;
+  width: 100%;
+  background: #160f3b;
+  border: none;
+  color: $text-color-primary;
+  font-size: 2em;
+  font-weight: 600;
+
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+// || BEST OF THE WEEK
+.main__week-best {
+  display: grid;
+  grid-template-areas:
+    "best__title best__title"
+    "best-one best-two"
+    "best-three best-four";
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-template-rows: repeat(3, minmax(0, auto));
+
+  gap: 2em;
+  margin: 10px 0;
+}
+
+.best__title {
+  grid-area: best__title;
+  @include title-lg;
+}
+
+.best__card--one {
+  grid-area: best-one;
+  background-image: url("/project-assests/images/team-ulunji.png");
+  @include resetBackground;
+}
+.best__card--two {
+  grid-area: best-two;
+  background-image: url("/project-assests/images/team-petro.png");
+  @include resetBackground;
+}
+.best__card--three {
+  grid-area: best-three;
+  background-image: url("/project-assests/images/team-bravery.png");
+  @include resetBackground;
+}
+.best__card--four {
+  grid-area: best-four;
+  background-image: url("/project-assests/images/team-teewo.png");
+  @include resetBackground;
+}
+
+.best__card {
+  height: 35em;
+  border-radius: $border-radius-sm;
+}
+
+// || PHOTOGRAPHY MEDIA QUERIES
+
+@media (max-width: 430px) {
+  .pricing {
+    grid-template-areas:
+      "title"
+      "card-one"
+      "card-two"
+      "card-three";
+    grid-template-columns: auto;
+    grid-template-rows: repeat(4, minmax(0, auto));
+
+    width: 100%;
+    gap: 2em;
+  }
+
+  .pricing__title {
+    font-size: 3em;
+  }
+
+  .pricing__price-card {
+    justify-self: center;
+    align-self: center;
+
+    background-image: linear-gradient(
+      to bottom,
+      #fff 80%,
+      rgba(255, 255, 255, 0) 80%
+    );
+    border-radius: 0.5em;
+    height: 30em;
+    width: 100%;
+
+    // @include displayFlex;
+    // flex-direction: column;
+  }
+
+  .main__week-best {
+    display: grid;
+    grid-template-areas:
+      "best__title"
+      "best-one"
+      "best-two"
+      "best-three"
+      "best-four";
+    grid-template-columns: auto;
+    grid-template-rows: repeat(5, minmax(0, auto));
+
+    gap: 2em;
+    margin: 10px 0;
+  }
+
+  .best__title {
+    font-size: 3em;
+  }
+  .best__card {
+    height: 30em;
+    border-radius: 0.5em;
+  }
+}
+
+// || ----- GALLERY -----
+
+.gallery {
+  margin: 20px 0;
+  @include title-lg;
+}
+
+@media (max-width: 430px) {
+  .gallery {
+    font-size: 3em;
+  }
+}
+
+.conference__gallery {
+  display: grid;
+  grid-template-areas:
+    "gallery-description"
+    "gallery-swiper";
+  grid-template-columns: auto;
+  grid-template-rows: repeat(2, minmax(0, auto));
+
+  gap: 2em;
+}
+
+.conference__description-wrapper {
+  grid-area: gallery-description;
+  border-radius: $border-radius-sm;
+  height: 40em;
+
+  background-color: #160f3b;
+  display: flex;
+}
+
+// meida height = 50%, width = 100%
+.conference-img {
+  width: 50%;
+  height: 100%;
+  background-image: url("/project-assests/images/conference.jpg");
+  @include resetBackground;
+  border-top-left-radius: $border_radius_sm;
+  border-bottom-left-radius: $border_radius_sm;
+}
+
+.conference-innerdescription {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  // flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.that-weird-class {
+  width: 90%;
+  // border: 2px solid yellow;
+}
+
+.inner-description__title {
+  font-size: 2.5em;
+  color: $text-color-primary;
+  margin-bottom: 0.5em;
+}
+
+.gallery-swipper {
+  grid-area: gallery-swiper;
+  margin-bottom: 2em;
+}
+
+.inner-description-conf {
+  color: #ddd;
+  font-size: 1.6em;
+}
+
+.conference-img-1 {
+  background-image: url("/project-assests/images/conference-img-2.jpg");
+  @include resetBackground;
+}
+.conference-img-2 {
+  background-image: url("/project-assests/images/conference-img-3.jpg");
+  @include resetBackground;
+}
+.conference-img-3 {
+  background-image: url("/project-assests/images/conference-img-4.jpg");
+  @include resetBackground;
+}
+.conference-img-4 {
+  background-image: url("/project-assests/images/conference-img-5.jpg");
+  @include resetBackground;
+}
+.conference-img-5 {
+  background-image: url("/project-assests/images/conference-img-6.jpg");
+  @include resetBackground;
+}
+.conference-img-6 {
+  background-image: url("/project-assests/images/conference.jpg");
+  @include resetBackground;
+}
+
+// || CONFERENCE GALLERY MEDIA QUERY
+@media (max-width: 430px) {
+  .conference__gallery {
+    gap: 1em;
+  }
+
+  .conference__description-wrapper {
+    grid-area: gallery-description;
+    border-radius: $border-radius-sm;
+    height: 40em;
+
+    background-color: #160f3b;
+    display: flex;
+    flex-direction: column;
+  }
+
+  // meida height = 50%, width = 100%
+  .conference-img {
+    width: 100%;
+    height: 50%;
+    background-image: url("/project-assests/images/conference.jpg");
+    @include resetBackground;
+    border-top-left-radius: 0.5em;
+    border-bottom-left-radius: 0;
+    border-top-right-radius: 0.5em;
+  }
+
+  .conference-innerdescription {
+    width: 100%;
+    height: 50%;
+    display: flex;
+    // flex-direction: row;
+    align-items: start;
+    justify-content: center;
+  }
+
+  .that-weird-class {
+    width: 90%;
+    // border: 2px solid yellow;
+  }
+
+  .inner-description__title {
+    font-size: 2em;
+    color: $text-color-primary;
+    text-align: center;
+    margin-bottom: 0.25em;
+  }
+
+  .gallery-swipper {
+    grid-area: gallery-swiper;
+  }
+
+  .inner-description-conf {
+    color: #ddd;
+    font-size: 1.6em;
+  }
+}
+
+// || WEDDINGS
+
+.weddings__gallery {
+  display: grid;
+  grid-template-areas:
+    "wedding-description"
+    "wedding-swiper";
+  grid-template-columns: auto;
+  grid-template-rows: repeat(2, minmax(0, auto));
+
+  gap: 2em;
+}
+
+.weddings__description-wrapper {
+  grid-area: wedding-description;
+
+  border-radius: $border-radius-sm;
+  height: 40em;
+
+  background-color: #160f3b;
+  display: flex;
+}
+
+.wedding-swiper {
+  grid-area: wedding-swiper;
+}
+
+.wedding-img {
+  width: 50%;
+  height: 100%;
+  background-image: url("/project-assests/images/wedding.jpg");
+  @include resetBackground;
+  background-position: top;
+  border-top-right-radius: $border_radius_sm;
+  border-bottom-right-radius: $border_radius_sm;
+}
+
+.wedding-innerdescription {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  // flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.wedding-img-1 {
+  background-image: url("/project-assests/images/wedding.jpg");
+  @include resetBackground;
+  background-position: top;
+}
+
+.wedding-img-2 {
+  background-image: url("/project-assests/images/wedding-img-1.jpg");
+  @include resetBackground;
+  background-position: top;
+}
+
+.wedding-img-3 {
+  background-image: url("/project-assests/images/wedding-img-2.jpg");
+  @include resetBackground;
+}
+
+// || WEDDING GALLERY MEDIA QUERY
+@media (max-width: 430px) {
+  .wedding__gallery {
+    gap: 1em;
+  }
+
+  .weddings__description-wrapper {
+    grid-area: wedding-description;
+    border-radius: 1em;
+    height: 40em;
+    background-color: #160f3b;
+    display: flex;
+    flex-direction: column-reverse;
+  }
+
+  // meida height = 50%, width = 100%
+  .wedding-img {
+    width: 100%;
+    height: 50%;
+    @include resetBackground;
+    background-position: top;
+    border-top-left-radius: 0.5em;
+    border-bottom-left-radius: 0;
+    border-top-right-radius: 0.5em;
+  }
+
+  .wedding-innerdescription {
+    width: 100%;
+    height: 50%;
+    display: flex;
+    // flex-direction: row;
+    align-items: start;
+    justify-content: center;
+  }
+
+  .that-weird-class {
+    width: 90%;
+    // border: 2px solid yellow;
+  }
+
+  .inner-description__title {
+    font-size: 2em;
+    color: $text-color-primary;
+    text-align: center;
+    margin-bottom: 0.25em;
+  }
+
+  .gallery-swipper {
+    grid-area: gallery-swiper;
+  }
+
+  .inner-description-conf {
+    color: #ddd;
+    font-size: 1.6em;
+  }
+
+  .swiper-button-next,
+  .swiper-button-prev {
+    opacity: 0;
+    pointer-events: none;
+  }
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+  filter: hue-rotate(40deg);
 }

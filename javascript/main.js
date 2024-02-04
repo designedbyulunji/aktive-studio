@@ -67,7 +67,9 @@ dropDownParentEl.addEventListener("mouseout", removeClass);
 const swiper = new Swiper(".mySwiper", {
   slidesPerView: 1,
   spaceBetween: 30,
+  speed: 2000,
   loop: true,
+  autoplay: true,
   pagination: {
     el: ".swiper-pagination",
     clickable: true,

@@ -22,10 +22,8 @@ $transition: all 250ms ease-in-out 5ms;
 
 // TITLES
 @mixin title-lg {
-  grid-area: title;
-
   color: $text-color-primary;
-  font-size: 5em;
+  font-size: 4em;
   font-weight: 700;
   text-align: center;
 }
