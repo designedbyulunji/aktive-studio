@@ -1004,6 +1004,10 @@ body {
   width: 400px;
 }
 
+.left__social-media-icons--contact-page {
+  left: 20px;
+}
+
 .left__social-media-icons--contact-page img {
   filter: none;
 }
@@ -1658,4 +1662,37 @@ fieldset {
 .swiper-button-next,
 .swiper-button-prev {
   filter: hue-rotate(40deg);
+}
+
+.hero-section__right--graphic-design {
+  background-image: url("/project-assests/images/graphics.jpg");
+}
+
+.gallery-graphic-design--up-up {
+  margin-top: 2em;
+}
+
+.logo-design-img {
+  background-image: url("/project-assests/images/laptop-pencils.jpg");
+}
+
+.graphic-img-1 {
+  background-image: url("/project-assests/images/graphics-animated-2.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.graphic-img-2 {
+  background-image: url("/project-assests/images/graphics-design-animated.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.graphic-img-3 {
+  background-image: url("/project-assests/images/laptop-pencils.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }/*# sourceMappingURL=style.css.map */
