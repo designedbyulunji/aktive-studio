@@ -403,7 +403,7 @@ body {
 
 .main__overview-photography {
   grid-area: photography;
-  background-image: url("/project-assests/images/photography-animated.jpg");
+  background-image: url("/project-assests/images/photographer-vector-web.png");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -411,7 +411,7 @@ body {
 
 .main__overview-videography {
   grid-area: videography;
-  background-image: url("/project-assests/images/videography-animated.jpg");
+  background-image: url("/project-assests/images/videographers-vector-web.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -427,7 +427,7 @@ body {
 
 .main__overview-web-development {
   grid-area: web-design;
-  background-image: url("/project-assests/images/web-dev-animated.jpg");
+  background-image: url("/project-assests/images/web-developer-vector-web.png");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -435,7 +435,7 @@ body {
 
 .main__overview-social-media-management {
   grid-area: social-media-management;
-  background-image: url("/project-assests/images/social-media-mgt-animated.jpg");
+  background-image: url("/project-assests/images/social-media-management-vector-web.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -585,38 +585,64 @@ body {
     font-size: 1.2em;
   }
 }
-.client-logo {
-  height: 300px;
-  width: 300px;
-}
-
 .swiper {
   margin-top: 2em;
   height: 50em;
-  border-radius: 1.5em;
+  border-radius: 1em;
   width: 100%;
+}
+
+.index-swiper {
+  height: 25em;
 }
 
 .swiper-slide {
   text-align: center;
   font-size: 18px;
-  background: #ccc;
+  background: #0e1425;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.swiper-slide img {
-  display: block;
-  width: 50%;
-  height: 50%;
-  -o-object-fit: cover;
-     object-fit: cover;
+.client-title {
+  color: #fff;
+  font-size: 4em;
+  font-weight: 700;
+  text-align: center;
+  margin: 0.5em 0;
 }
 
-.swiper {
-  margin-left: auto;
-  margin-right: auto;
+@media (max-width: 430px) {
+  .client-title {
+    font-size: 3em;
+  }
+}
+.client-logo {
+  width: 220px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 0.5em;
+}
+
+.main__client-logos {
+  width: 100%;
+  overflow: hidden;
+  height: 15em;
+  border-radius: 1em;
+  margin-top: 2em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.client-logos__group-1,
+.client-logos__group-2 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.5em;
+  gap: 2em;
 }
 
 @media (max-width: 430px) {
@@ -639,7 +665,7 @@ body {
 
 .footer__address {
   grid-area: footer__address;
-  justify-self: center;
+  justify-self: flex-start;
 }
 
 .hero-section__social-media-icons--footer {
@@ -760,10 +786,7 @@ body {
 }
 
 .hero__about-page {
-  background-image: url("/project-assests/images/Display.jpg");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
+  background-image: linear-gradient(to left top, #0e1425, #4f1440 40%, #4f1440 50%, #0e1425);
   animation: none;
 }
 .hero__about-page:hover {
@@ -988,7 +1011,7 @@ body {
   }
 }
 .hero-section__right--contact-page {
-  background-image: url("/project-assests/images/contact-page-image.jpg");
+  background-image: url("/project-assests/images/contact-person-vector-large-01.png");
   animation: none;
 }
 
@@ -1016,7 +1039,7 @@ body {
 }
 
 .right-navigation__links--contact-page li a {
-  color: #050505;
+  color: #fff;
 }
 
 .right-bottom__button--contact-page {
@@ -1695,4 +1718,16 @@ fieldset {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+}
+
+.client-logo-1 {
+  background-image: url("/project-assests/client-logos/10-pin-plug.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.ten-pin {
+  margin-top: 20px;
+  width: 200px;
 }/*# sourceMappingURL=style.css.map */
