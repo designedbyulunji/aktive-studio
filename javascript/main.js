@@ -86,7 +86,7 @@ const swiper = new Swiper(".mySwiper", {
 let x = 0;
 let typeSpeed = 150;
 let fullNamePlaceholder = "";
-let fullNamePlaceholderValue = `Krassic Felix`;
+let fullNamePlaceholderValue = `designedbyulunji`;
 
 const fullNameEl = document.getElementById("fullname");
 
@@ -105,7 +105,7 @@ animateFullNamePlaceholder();
 
 let y = 0;
 let emailPlaceholder = "";
-let emailPlaceholderValue = `example@gmail.com`
+let emailPlaceholderValue = `designedbyulunji@gmail.com`
 
 const emailEl = document.getElementById("email");
 

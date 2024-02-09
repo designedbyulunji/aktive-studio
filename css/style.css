@@ -39,7 +39,7 @@ body {
 }
 
 .hero-section__right {
-  background-image: url("/project-assests/images/adobe-products-on-tablet.jpg");
+  background-image: url("/project-assests/aktive-stu-compressed/adobe-products-on-tablet-min.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -71,31 +71,31 @@ body {
 
 @keyframes switchBanner {
   0% {
-    background-image: url("/project-assests/images/adobe-products-on-tablet.jpg");
+    background-image: url("/project-assests/aktive-stu-compressed/adobe-products-on-tablet-min.jpg");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
   }
   25% {
-    background-image: url("/project-assests/images/cameras.jpg");
+    background-image: url("/project-assests/aktive-stu-compressed/cameras-min.jpg");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
   }
   50% {
-    background-image: url("/project-assests/images/programming.jpg");
+    background-image: url("/project-assests/aktive-stu-compressed/programming-min.jpg");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
   }
   75% {
-    background-image: url("/project-assests/images/shiny-lens.jpg");
+    background-image: url("/project-assests/aktive-stu-compressed/shiny-lens-min.jpg");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
   }
   100% {
-    background-image: url("/project-assests/images/social-media-woman-laptop.jpg");
+    background-image: url("/project-assests/aktive-stu-compressed/social-media-woman-laptop-min.jpg");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -167,6 +167,10 @@ body {
 .dropdown {
   position: absolute;
   display: none;
+  background-color: rgba(22, 15, 59, 0.8);
+  background-image: linear-gradient(to left top, rgba(22, 15, 59, 0.8), rgba(79, 20, 64, 0.5) 40%, rgba(79, 20, 64, 0.5) 50%, rgba(22, 15, 59, 0.8));
+  border-radius: 0.5em;
+  padding: 0.5em 2em;
 }
 .dropdown li {
   margin: 1.5em 0;
@@ -177,7 +181,7 @@ body {
 }
 
 .hero-section__left {
-  background-image: url("/project-assests/images/Display.jpg");
+  background-image: url("/project-assests/aktive-stu-compressed/Display-min.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -306,14 +310,93 @@ body {
     transform: scale(1);
   }
 }
-@media (max-width: 430px) {
+@media (max-width: 1024px) {
+  .hero-section__right-navigation {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    justify-content: flex-end;
+    padding: 0 2em;
+    height: 10em;
+    width: 100%;
+    position: relative;
+    overflow-x: hidden;
+  }
+  .btn {
+    font-size: 2em;
+    padding: 10px 20px;
+  }
+  .header__hero-section {
+    height: 95vh;
+    width: 90%;
+  }
+}
+@media (max-width: 768px) {
   .header {
     display: block;
-    height: 50vh;
+    height: 70vh;
   }
   .header__hero-section {
     width: 100%;
-    height: 50vh;
+    height: 70vh;
+    border: none;
+    box-shadow: none;
+    border-radius: none;
+    grid-template-areas: "hero-section__right";
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+    grid-template-rows: repeat(1, minmax(0, 1fr));
+  }
+  .header__hero-section .hero-section__left {
+    display: none;
+  }
+  .header__hero-section .hero-section__right {
+    border-radius: 0;
+  }
+  .hero-section__right-navigation {
+    justify-content: space-between;
+    padding: 0 2.5em;
+    height: 10em;
+    width: 100%;
+  }
+  .right-navigation__logo {
+    display: block;
+  }
+  .right-navigation__links {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 250ms ease-in-out 5ms;
+  }
+  .right-navigation__links li {
+    margin: 0 0.5em;
+    transition: all 250ms ease-in-out 5ms;
+  }
+  .hero-section__right-bottom {
+    bottom: 0;
+    width: 100%;
+    height: 20em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0;
+  }
+  .right-bottom__glow {
+    margin-top: 15px;
+  }
+  .btn {
+    font-size: 2em;
+    padding: 8px 20px;
+  }
+}
+@media (max-width: 430px) {
+  .header {
+    display: block;
+    height: 60vh;
+  }
+  .header__hero-section {
+    width: 100%;
+    height: 60vh;
     border: none;
     box-shadow: none;
     border-radius: none;
@@ -403,7 +486,7 @@ body {
 
 .main__overview-photography {
   grid-area: photography;
-  background-image: url("/project-assests/images/photographer-vector-web.png");
+  background-image: url("/project-assests/aktive-stu-compressed/photographer-vector-web-min.png");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -411,7 +494,7 @@ body {
 
 .main__overview-videography {
   grid-area: videography;
-  background-image: url("/project-assests/images/videographers-vector-web.jpg");
+  background-image: url("/project-assests/aktive-stu-compressed/videographers-vector-web-min.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -427,7 +510,7 @@ body {
 
 .main__overview-web-development {
   grid-area: web-design;
-  background-image: url("/project-assests/images/web-developer-vector-web.png");
+  background-image: url("/project-assests/aktive-stu-compressed/web-developer-vector-web-min.png");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -435,7 +518,7 @@ body {
 
 .main__overview-social-media-management {
   grid-area: social-media-management;
-  background-image: url("/project-assests/images/social-media-management-vector-web.jpg");
+  background-image: url("/project-assests/aktive-stu-compressed/social-media-management-vector-web-min.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -471,6 +554,48 @@ body {
   opacity: 1;
 }
 
+@media (max-width: 1024px) {
+  .main {
+    width: 90%;
+  }
+  .card {
+    border-radius: 0.8em;
+    height: 25em;
+  }
+  .card__description {
+    position: absolute;
+    bottom: 0;
+    background: rgba(22, 15, 59, 0.6);
+    border-bottom-right-radius: 0.8em;
+    border-bottom-right-radius: 0.8em;
+    width: 100%;
+    padding: 0.25em 2em;
+    transform: translateY(150px);
+  }
+  .card__description:hover {
+    transform: translateY(0);
+  }
+  .min-description-title {
+    margin-bottom: 5px;
+    font-size: 1.7em;
+  }
+  .min-description {
+    font-size: 1.5em;
+    opacity: 0;
+  }
+  .min-description:hover {
+    opacity: 1;
+  }
+}
+@media (max-width: 768px) {
+  .main {
+    background-color: #262240;
+    border-radius: 0;
+    padding: 0.5em 2.5em;
+    width: 100%;
+    margin-inline: auto;
+  }
+}
 @media (max-width: 430px) {
   .card {
     height: 22em;
@@ -536,7 +661,7 @@ body {
   height: 70%;
   border-top-right-radius: 1.5em;
   border-top-left-radius: 1.5em;
-  background-image: url("/project-assests/images/gaming-set-up.jpg");
+  background-image: url("/project-assests/aktive-stu-compressed/gaming-set-up-min.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -565,6 +690,32 @@ body {
   color: #fff;
 }
 
+@media (max-width: 1024px) {
+  .main__news-container {
+    grid-area: news__description;
+    height: 40em;
+    border-radius: 1em;
+  }
+  .news__banner {
+    width: 100%;
+    height: 70%;
+    border-top-right-radius: 1em;
+    border-top-left-radius: 1em;
+    background-image: url("/project-assests/aktive-stu-compressed/gaming-set-up-min.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-position: top;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .news__description {
+    font-size: 1.8em;
+    color: #fff;
+    text-align: justify;
+  }
+}
 @media (max-width: 430px) {
   .main__news-container {
     height: 30em;
@@ -599,7 +750,7 @@ body {
 .swiper-slide {
   text-align: center;
   font-size: 18px;
-  background: #0e1425;
+  background-color: #0e1425;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -716,6 +867,27 @@ body {
   align-self: center;
 }
 
+@media (max-width: 1024px) {
+  .footer {
+    width: 90%;
+  }
+}
+@media (max-width: 768px) {
+  .client-logo {
+    width: 180px;
+  }
+  .footer {
+    padding: 2em 5em;
+    width: 100%;
+  }
+  .hero-section__social-media-icons--footer img {
+    filter: invert(1);
+    height: 30px;
+    margin: 0 0.5em;
+    transition: all 250ms ease-in-out 5ms;
+    width: 30px;
+  }
+}
 @media (max-width: 430px) {
   .footer {
     grid-template-areas: "footer__address" "hero-section__social-media-icons--footer" "footer__copyright";
@@ -773,7 +945,7 @@ body {
 }
 
 .hero-section__right-bottom--other-pages {
-  justify-content: space-evenly;
+  justify-content: space-between;
 }
 
 @media (max-width: 430px) {
@@ -786,7 +958,7 @@ body {
 }
 
 .hero__about-page {
-  background-image: linear-gradient(to left top, #0e1425, #4f1440 40%, #4f1440 50%, #0e1425);
+  background-image: url("/project-assests/images/contact-banner.png");
   animation: none;
 }
 .hero__about-page:hover {
@@ -901,6 +1073,7 @@ body {
   bottom: 0;
   transform: translateY(0px);
   transition: all 250ms ease-in-out 5ms;
+  text-align: justify;
 }
 .profile-description:hover {
   background-color: rgb(22, 15, 59);
@@ -935,7 +1108,7 @@ body {
   }
 }
 .about-team__profile-picture--felix {
-  background-image: url("/project-assests/images/team-felix.png");
+  background-image: url("/project-assests/aktive-stu-compressed/team-felix-min.png");
   background-size: cover;
   background-repeat: no-repeat;
   background-size: cover;
@@ -944,7 +1117,7 @@ body {
 }
 
 .about-team__profile-picture--bravery {
-  background-image: url("/project-assests/images/team-bravery.png");
+  background-image: url("/project-assests/aktive-stu-compressed/team-bravery-min.png");
   background-size: cover;
   background-repeat: no-repeat;
   background-size: cover;
@@ -953,7 +1126,7 @@ body {
 }
 
 .about-team__profile-picture--tiwo {
-  background-image: url("/project-assests/images/team-teewo.png");
+  background-image: url("/project-assests/aktive-stu-compressed/team-teewo-min.png");
   background-size: cover;
   background-repeat: no-repeat;
   background-size: cover;
@@ -962,7 +1135,7 @@ body {
 }
 
 .about-team__profile-picture--ayami {
-  background-image: url("/project-assests/images/team-petro.png");
+  background-image: url("/project-assests/aktive-stu-compressed/team-petro-min.png");
   background-size: cover;
   background-repeat: no-repeat;
   background-size: cover;
@@ -971,7 +1144,7 @@ body {
 }
 
 .about-team__profile-picture--ulunji {
-  background-image: url("/project-assests/images/team-ulunji.png");
+  background-image: url("/project-assests/aktive-stu-compressed/team-ulunji-min.png");
   background-size: cover;
   background-repeat: no-repeat;
   background-size: cover;
@@ -979,6 +1152,39 @@ body {
   background-repeat: no-repeat;
 }
 
+@media (max-width: 1024px) {
+  .card--profile {
+    height: 40em;
+    background: none;
+  }
+  .profile-name {
+    font-size: 2.5em;
+    text-align: center;
+  }
+  .profile-title {
+    color: rgb(55, 93, 206);
+    font-size: 1.6em;
+    text-align: center;
+  }
+}
+@media (max-width: 768px) {
+  .card--profile {
+    height: 40em;
+    background: none;
+  }
+  .profile-name {
+    font-size: 2em;
+    text-align: center;
+  }
+  .profile-title {
+    color: rgb(55, 93, 206);
+    font-size: 1.5em;
+    text-align: center;
+  }
+  .zero-about-page {
+    display: none;
+  }
+}
 @media (max-width: 430px) {
   .main__about-team {
     grid-template-areas: "title" "felix" "brave" "tiwo" "ayami" "ulunji";
@@ -1011,7 +1217,7 @@ body {
   }
 }
 .hero-section__right--contact-page {
-  background-image: url("/project-assests/images/contact-person-vector-large-01.png");
+  background-image: url("/project-assests/aktive-stu-compressed/contact-person-vector-large-01-min.png");
   animation: none;
 }
 
@@ -1039,7 +1245,7 @@ body {
 }
 
 .right-navigation__links--contact-page li a {
-  color: #fff;
+  color: #0030aa;
 }
 
 .right-bottom__button--contact-page {
@@ -1096,7 +1302,7 @@ body {
 
 .email-wrapper__left-side {
   grid-area: img;
-  background-image: url("/project-assests/images/contact-page-image-secondary.jpg");
+  background-image: url("/project-assests/aktive-stu-compressed/contact-page-image-secondary-min.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -1156,6 +1362,15 @@ fieldset {
   border: 1px solid #fff;
 }
 
+@media (max-width: 1024px) {
+  .main__email-wrapper {
+    height: 45em;
+    margin: 2em 0;
+  }
+  .main {
+    padding: 1em 2.5em;
+  }
+}
 @media (max-width: 430px) {
   .main__contact-address {
     grid-template-areas: "title" "physical-address" "postal-address";
@@ -1207,7 +1422,7 @@ fieldset {
 }
 .hero-section__right--photography {
   animation: none;
-  background-image: url("/project-assests/images/cameras.jpg");
+  background-image: url("/project-assests/aktive-stu-compressed/cameras-min.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -1340,7 +1555,7 @@ fieldset {
 
 .best__card--one {
   grid-area: best-one;
-  background-image: url("/project-assests/images/team-ulunji.png");
+  background-image: url("/project-assests/aktive-stu-compressed/team-ulunji-min.png");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -1348,7 +1563,7 @@ fieldset {
 
 .best__card--two {
   grid-area: best-two;
-  background-image: url("/project-assests/images/team-petro.png");
+  background-image: url("/project-assests/aktive-stu-compressed/team-petro-min.png");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -1356,7 +1571,7 @@ fieldset {
 
 .best__card--three {
   grid-area: best-three;
-  background-image: url("/project-assests/images/team-bravery.png");
+  background-image: url("/project-assests/aktive-stu-compressed/team-bravery-min.png");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -1364,7 +1579,7 @@ fieldset {
 
 .best__card--four {
   grid-area: best-four;
-  background-image: url("/project-assests/images/team-teewo.png");
+  background-image: url("/project-assests/aktive-stu-compressed/team-teewo-min.png");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -1375,6 +1590,32 @@ fieldset {
   border-radius: 1em;
 }
 
+@media (max-width: 1024px) {
+  .pricing {
+    width: 100%;
+    margin-inline: auto;
+  }
+}
+@media (max-width: 768px) {
+  .pricing {
+    grid-template-areas: "title title" "card-one card-two" "card-three .";
+    grid-template-columns: repeat(2, minmax(0, auto));
+    grid-template-rows: repeat(2, minmax(0, auto));
+    width: 80%;
+    gap: 2em;
+  }
+  .pricing__title {
+    font-size: 3em;
+  }
+  .pricing__price-card {
+    justify-self: center;
+    align-self: center;
+    background-image: linear-gradient(to bottom, #fff 80%, rgba(255, 255, 255, 0) 80%);
+    border-radius: 0.5em;
+    height: 30em;
+    width: 100%;
+  }
+}
 @media (max-width: 430px) {
   .pricing {
     grid-template-areas: "title" "card-one" "card-two" "card-three";
@@ -1442,7 +1683,7 @@ fieldset {
 .conference-img {
   width: 50%;
   height: 100%;
-  background-image: url("/project-assests/images/conference.jpg");
+  background-image: url("/project-assests/aktive-stu-compressed/conference-min.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -1479,47 +1720,62 @@ fieldset {
 }
 
 .conference-img-1 {
-  background-image: url("/project-assests/images/conference-img-2.jpg");
+  background-image: url("/project-assests/aktive-stu-compressed/conference-img-2-min.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
 }
 
 .conference-img-2 {
-  background-image: url("/project-assests/images/conference-img-3.jpg");
+  background-image: url("/project-assests/aktive-stu-compressed/conference-img-3-min.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
 }
 
 .conference-img-3 {
-  background-image: url("/project-assests/images/conference-img-4.jpg");
+  background-image: url("/project-assests/aktive-stu-compressed/conference-img-4-min.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
 }
 
 .conference-img-4 {
-  background-image: url("/project-assests/images/conference-img-5.jpg");
+  background-image: url("/project-assests/aktive-stu-compressed/conference-img-5-min.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
 }
 
 .conference-img-5 {
-  background-image: url("/project-assests/images/conference-img-6.jpg");
+  background-image: url("/project-assests/aktive-stu-compressed/conference-img-6-min.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
 }
 
 .conference-img-6 {
-  background-image: url("/project-assests/images/conference.jpg");
+  background-image: url("/project-assests/aktive-stu-compressed/conference-min.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
 }
 
+@media (max-width: 768px) {
+  .conference__description-wrapper {
+    grid-area: gallery-description;
+    border-radius: 1em;
+    height: 35em;
+    background-color: #160f3b;
+    display: flex;
+  }
+  .swiper {
+    margin-top: 2em;
+    height: 35em;
+    border-radius: 1em;
+    width: 100%;
+  }
+}
 @media (max-width: 430px) {
   .conference__gallery {
     gap: 1em;
@@ -1590,7 +1846,7 @@ fieldset {
 .wedding-img {
   width: 50%;
   height: 100%;
-  background-image: url("/project-assests/images/wedding.jpg");
+  background-image: url("/project-assests/aktive-stu-compressed/wedding-min.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -1608,7 +1864,7 @@ fieldset {
 }
 
 .wedding-img-1 {
-  background-image: url("/project-assests/images/wedding.jpg");
+  background-image: url("/project-assests/aktive-stu-compressed/wedding-min.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -1616,7 +1872,7 @@ fieldset {
 }
 
 .wedding-img-2 {
-  background-image: url("/project-assests/images/wedding-img-1.jpg");
+  background-image: url("/project-assests/aktive-stu-compressed/wedding-img-1-min.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -1624,7 +1880,7 @@ fieldset {
 }
 
 .wedding-img-3 {
-  background-image: url("/project-assests/images/wedding-img-2.jpg");
+  background-image: url("/project-assests/aktive-stu-compressed/wedding-img-2-min.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -1688,7 +1944,7 @@ fieldset {
 }
 
 .hero-section__right--graphic-design {
-  background-image: url("/project-assests/images/graphics.jpg");
+  background-image: url("/project-assests/images/graphics-design-animated.jpg");
 }
 
 .gallery-graphic-design--up-up {
@@ -1700,7 +1956,7 @@ fieldset {
 }
 
 .graphic-img-1 {
-  background-image: url("/project-assests/images/graphics-animated-2.jpg");
+  background-image: url("/project-assests/aktive-stu-compressed/graphics-animated-2-min.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -1730,4 +1986,70 @@ fieldset {
 .ten-pin {
   margin-top: 20px;
   width: 200px;
+}
+
+.additional__contact-description {
+  font-size: 1.8em;
+  color: #fff;
+  text-align: justify;
+}
+
+.dropdown.contact-page__li-white li a {
+  color: #fff;
+  transition: all 250ms ease-in-out 5ms;
+}
+.dropdown.contact-page__li-white li a:hover {
+  color: #b61b90;
+}
+
+@media (max-width: 1024px) {
+  .ten-hidden {
+    display: none;
+  }
+}
+.hero-section__welcome-aktive {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .hide-this-one {
+    display: none;
+  }
+  .hero-section__welcome-aktive {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    display: block;
+    width: 100%;
+  }
+  .welcome {
+    background: -webkit-linear-gradient(45deg, #c7fdff, #ee15b4 40%, #4d103d 50%, #160f3b);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 6em;
+    text-align: center;
+  }
+  .aktive-subtitle {
+    color: #fff;
+    font-size: 4em;
+    text-align: center;
+  }
+}
+@media (max-width: 430px) {
+  .welcome {
+    background: -webkit-linear-gradient(45deg, #c7fdff, #ee15b4 40%, #4d103d 50%, #160f3b);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 2.5em;
+  }
+  .aktive-subtitle {
+    color: #fff;
+    font-size: 1em;
+    text-align: center;
+  }
 }/*# sourceMappingURL=style.css.map */
