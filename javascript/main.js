@@ -62,6 +62,19 @@ function removeClass() {
 dropDownParentEl.addEventListener("mouseover", addClass);
 dropDownParentEl.addEventListener("mouseout", removeClass);
 
+/* SMALL SCREEN NAVIGATION */
+
+const smNavEl = document.querySelector(".nav-sm");
+
+navIconEl.addEventListener("click", activateLinks);
+
+function activateLinks() {
+  smNavEl.classList.toggle("active");
+}
+
+
+
+
 /* SWIPPER */
 
 const swiper = new Swiper(".mySwiper", {

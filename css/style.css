@@ -1245,6 +1245,7 @@ body {
 }
 
 .right-navigation__links--contact-page li a {
+  position: relative;
   color: #0030aa;
 }
 
@@ -2029,6 +2030,7 @@ fieldset {
   }
   .welcome {
     background: -webkit-linear-gradient(45deg, #c7fdff, #ee15b4 40%, #4d103d 50%, #160f3b);
+    background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     font-size: 6em;
@@ -2043,6 +2045,7 @@ fieldset {
 @media (max-width: 430px) {
   .welcome {
     background: -webkit-linear-gradient(45deg, #c7fdff, #ee15b4 40%, #4d103d 50%, #160f3b);
+    background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     font-size: 2.5em;
@@ -2051,5 +2054,39 @@ fieldset {
     color: #fff;
     font-size: 1em;
     text-align: center;
+  }
+}
+.nav-sm {
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+  background-image: linear-gradient(to left top, rgba(22, 15, 59, 0.9), rgba(79, 20, 64, 0.9) 40%, rgba(79, 20, 64, 0.9) 50%, rgba(22, 15, 59, 0.9));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 250ms ease-in-out 5ms;
+  transform: translateY(-1000px);
+  z-index: 1;
+}
+
+.nav-sm__links {
+  margin-inline: auto;
+  height: 95vh;
+}
+.nav-sm__links li {
+  margin: 1em 0;
+}
+.nav-sm__links li a {
+  color: #fff;
+  font-size: 1.5em;
+  transition: all 250ms ease-in-out 5ms;
+}
+.nav-sm__links li a:hover {
+  color: #b61b90;
+}
+
+@media (max-width: 430px) {
+  .nav-sm.active {
+    transform: translateY(0);
   }
 }/*# sourceMappingURL=style.css.map */
